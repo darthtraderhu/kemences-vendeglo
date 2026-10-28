@@ -103,9 +103,38 @@ h1, h2, h3 { margin: 0 0 .4em; font-weight: 400; }
 .fejlec__tel { font-weight: 700; text-decoration: none; white-space: nowrap; color: var(--krem); font-size: .95rem; }
 .fejlec__cta .gomb { padding: .75em 1.2em; font-size: .9rem; }
 .fejlec__mobilmenu { display: none; }
+.fejlec__belso { position: relative; }
 @media (max-width: 960px) {
-  .fejlec__menu, .fejlec__tel { display: none; }
-  .fejlec__mobilmenu { display: flex; gap: 20px; overflow-x: auto; padding: 0 18px 12px; }
+  .fejlec__menu, .fejlec__tel, .fejlec__cta { display: none; }
+  .fejlec__mobilmenu { display: flex; gap: 18px; position: absolute; right: clamp(18px, 4vw, 40px); top: 50%; transform: translateY(-50%); }
+  .fejlec { position: sticky; }
+  .fejlec > .fejlec__mobilmenu { top: 0; transform: none; height: 100%; align-items: center; }
+}
+
+/* Alsó, applikációs menüsor (mobil) */
+.alsosav { display: none; }
+@media (max-width: 960px) {
+  body { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .alsosav {
+    display: grid; grid-template-columns: repeat(5, 1fr); align-items: end;
+    position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 60;
+    height: 66px; padding: 0 6px 8px; border-radius: 22px;
+    background: rgba(23,17,13,.86); backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(226,183,100,.22); box-shadow: 0 18px 40px -12px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.05);
+  }
+  .alsosav a { display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: var(--hamu); font-size: .68rem; font-weight: 600; letter-spacing: .02em; -webkit-tap-highlight-color: transparent; }
+  .alsosav svg { width: 24px; height: 24px; transition: transform .2s; }
+  .alsosav__elem[aria-current="page"] { color: var(--arany); }
+  .alsosav__elem[aria-current="page"]::after { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--arany); margin-top: -1px; }
+  .alsosav__elem:active svg { transform: scale(.88); }
+  .alsosav__fo { color: var(--krem) !important; }
+  .alsosav__gomb {
+    display: grid; place-items: center; width: 58px; height: 58px; margin-top: -30px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--izzas), var(--arany) 55%, var(--arany-mely));
+    color: var(--ej); box-shadow: 0 0 0 5px var(--ej), 0 10px 30px -4px rgba(226,183,100,.6);
+  }
+  .alsosav__gomb svg { width: 26px; height: 26px; stroke-width: 2; }
+  .alsosav__fo[aria-current="page"] .alsosav__gomb { box-shadow: 0 0 0 5px var(--ej), 0 0 0 7px var(--arany); }
 }
 
 /* Logó */

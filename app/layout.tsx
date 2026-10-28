@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Caveat, Great_Vibes, Instrument_Serif } from "next/font/google";
+import Alsosav from "@/components/Alsosav";
 import Fejlec from "@/components/Fejlec";
 import Lablec from "@/components/Lablec";
 import { vendeglo } from "@/lib/adatok";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Fejlec />
         <main id="tartalom">{children}</main>
         <Lablec />
+        <Alsosav />
       </body>
     </html>
   );

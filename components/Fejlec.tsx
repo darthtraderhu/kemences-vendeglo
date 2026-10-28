@@ -26,12 +26,9 @@ export default function Fejlec() {
           </Link>
         </div>
       </div>
-      <nav aria-label="Mobil menü" className="fejlec__mobilmenu">
-        {menupontok.map((m) => (
-          <Link key={m.href} href={m.href}>
-            {m.cim}
-          </Link>
-        ))}
+      <nav aria-label="Másodlagos menü" className="fejlec__mobilmenu">
+        <Link href="/helyszin">Helyszín</Link>
+        <Link href="/kapcsolat">Kapcsolat</Link>
       </nav>
     </header>
   );
