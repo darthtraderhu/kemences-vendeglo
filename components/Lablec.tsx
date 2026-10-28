@@ -9,7 +9,7 @@ export default function Lablec() {
     <footer className="lablec">
       <div className="lablec__belso">
         <div>
-          <Logo />
+          <Logo meret="lablec" />
           <p className="lablec__jelmondat">{vendeglo.jelmondat}</p>
         </div>
         <address className="lablec__cim">

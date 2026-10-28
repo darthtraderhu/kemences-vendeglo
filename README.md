@@ -41,7 +41,7 @@ az adatok az űrlapon maradnak, és a telefonszámot ajánlja fel. Ingyenes kere
 
 ## Élesítés előtt egyeztetendő a tulajdonossal
 
-- [ ] Eredeti logófájl (SVG/PNG) – most a kézírásos jel közelítése áll a helyén (`components/Logo.tsx`)
+- [x] Logó: a feltöltött fájlból vektorosítva, `public/logo/` (arany, krém, sötét), favicon: `app/icon.svg`
 - [ ] Domain (→ `SITE_URL`), és melyik e-mail-címre menjenek az ajánlatkérések
 - [ ] Terasz befogadóképessége (most: „egyeztetendő”)
 - [ ] Fotó az új, fa borítású homlokzatról; és megnézni, hogy a teraszfotó (narancs oszlopok) aktuális-e még
