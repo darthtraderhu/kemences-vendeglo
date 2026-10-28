@@ -42,7 +42,8 @@ az adatok az űrlapon maradnak, és a telefonszámot ajánlja fel. Ingyenes kere
 ## Élesítés előtt egyeztetendő a tulajdonossal
 
 - [x] Logó: a feltöltött fájlból vektorosítva, `public/logo/` (arany, krém, sötét), favicon: `app/icon.svg`
-- [ ] Domain (→ `SITE_URL`), és melyik e-mail-címre menjenek az ajánlatkérések
+- [x] Domain: www.kemenceshalasztelek.hu (alapértelmezett `SITE_URL`)
+- [ ] Melyik e-mail-címre menjenek az ajánlatkérések
 - [ ] Terasz befogadóképessége (most: „egyeztetendő”)
 - [ ] Fotó az új, fa borítású homlokzatról; és megnézni, hogy a teraszfotó (narancs oszlopok) aktuális-e még
 - [ ] Telefonos elérhetőség időszaka, ha van

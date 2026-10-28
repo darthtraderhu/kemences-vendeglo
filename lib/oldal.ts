@@ -1,5 +1,5 @@
 // A kanonikus cím a SITE_URL környezeti változóból jön (lásd .env.example).
-export const siteUrl = (process.env.SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+export const siteUrl = (process.env.SITE_URL ?? "https://www.kemenceshalasztelek.hu").replace(/\/$/, "");
 
 export const menupontok = [
   { href: "/rendezvenyek", cim: "Rendezvények" },
